@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f1116" />
+    <title>Bezaha — Guide à Madagascar</title>
+    <link rel="shortcut icon" href="img/tortu de mer.jpg" type="image/x-icon">
+    <meta
+      name="description"
+      content="Bezaha est un guide touristique à Madagascar : lieux incontournables, restauration, sorties, conseils."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <header class="topbar">
+        <div class="topbar__left">
+          <button class="icon-btn is-hidden" id="btnBack" aria-label="Retour">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M14.7 5.3a1 1 0 0 1 0 1.4L10.41 11l4.29 4.3a1 1 0 1 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.4 0Z"
+              />
+            </svg>
+          </button>
+          <h1 class="brand" id="brandTitle">Bezaha</h1>
+        </div>
+        <button class="icon-btn" id="btnFavorites" aria-label="Favoris">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 21s-7-4.4-9.5-8.7C.7 8.9 2.2 5.7 5.5 5c1.9-.4 3.7.4 4.8 1.8C11.4 5.4 13.2 4.6 15.1 5c3.3.7 4.8 3.9 3 7.3C19 16.6 12 21 12 21Z"
+            />
+          </svg>
+        </button>
+      </header>
+
+      <main class="screen" id="screen" aria-live="polite"></main>
+
+      <nav class="bottom-nav" aria-label="Navigation">
+        <button class="bottom-nav__item is-active" data-route="home" aria-current="page">
+          <span class="bottom-nav__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z"
+              />
+            </svg>
+          </span>
+        </button>
+        <button class="bottom-nav__item" data-route="spots">
+          <span class="bottom-nav__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 21s-7-4.4-9.5-8.7C.7 8.9 2.2 5.7 5.5 5c1.9-.4 3.7.4 4.8 1.8C11.4 5.4 13.2 4.6 15.1 5c3.3.7 4.8 3.9 3 7.3C19 16.6 12 21 12 21Z"
+              />
+            </svg>
+          </span>
+        </button>
+        <button class="bottom-nav__item" data-route="todo">
+          <span class="bottom-nav__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4 10h16v2H4v-2Zm0 6h10v2H4v-2ZM4 4h16v2H4V4Zm14.6 12.6 1.4 1.4-4 4-2-2 1.4-1.4.6.6 2.6-2.6Z"
+              />
+            </svg>
+          </span>
+        </button>
+        <button class="bottom-nav__item" data-route="more">
+          <span class="bottom-nav__icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm10 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm10 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" />
+            </svg>
+          </span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="sheet-backdrop is-hidden" id="sheetBackdrop" role="presentation"></div>
+    <section class="sheet is-hidden" id="sheet" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="sheet__handle" aria-hidden="true"></div>
+      <div class="sheet__content" id="sheetContent"></div>
+    </section>
+
+    <div class="modal-backdrop is-hidden" id="mapBackdrop" role="presentation"></div>
+    <section
+      class="modal-card is-hidden"
+      id="mapModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Carte Madagascar"
+    >
+      <button class="modal-card__close" id="btnCloseMap" aria-label="Fermer la carte">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M18.3 5.7a1 1 0 0 1 0 1.4L13.4 12l4.9 4.9a1 1 0 1 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 0 1-1.4-1.4l4.9-4.9-4.9-4.9a1 1 0 0 1 1.4-1.4l4.9 4.9 4.9-4.9a1 1 0 0 1 1.4 0Z"
+          />
+        </svg>
+      </button>
+      <div class="modal-card__content" id="mapModalContent"></div>
+    </section>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

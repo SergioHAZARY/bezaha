@@ -1,0 +1,16 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+
+# Node / tooling (au cas où)
+node_modules/
+dist/
+build/
+.parcel-cache/
+.turbo/
+
+# Logs
+*.log
+
