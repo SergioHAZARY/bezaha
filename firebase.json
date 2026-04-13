@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "site": "bezaha",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "bezaha/**",
+      "README.md"
+    ]
+  }
+}
