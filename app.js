@@ -296,7 +296,6 @@ function renderHome() {
       <div class="hero__media" style="background-image:url('${encodeURI("./img/valle toleara.jpg")}')">
         <div class="hero__content">
           <h2 class="hero__title">Bienvenu à BEZAHA</h2>
-          <button class="cta" data-action="visit">VISITEZ-NOUS</button>
         </div>
       </div>
     </section>
